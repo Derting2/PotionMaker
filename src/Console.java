@@ -205,14 +205,14 @@ public class Console {
         }
         System.out.println("Магазин кристаллов: ");
 
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 5; i++) {
             for (int j = 0; j < 2; j++) {
                 int index = j + (2 * i);
                 var keyList = new ArrayList<>(pl.crystals.keySet());
                 String key = keyList.get(index);
                 System.out.print(key + ": " + pl.crystals.get(key) + " Монет" + " ".repeat(5));
             }
-            System.out.println("\n");
+            System.out.print("\n");
         }
 
         System.out.println("Выйти (В)");

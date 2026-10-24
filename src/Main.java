@@ -359,13 +359,11 @@ void showcrystalshop(){
         for (int i = 0; i < keysListl.size(); i++) {
             keysListl.set(i, keysListl.get(i).toLowerCase());
         }
-        String spanswer = answer + ": ";
-        System.out.println(answer.toLowerCase() + " " + keysListl.getFirst() + " " +  keysListl.getLast());
-        if (keysListl.contains(spanswer)) {
+
+        if (keysListl.contains(answer)) {
             String key = answer.substring(0, 1).toUpperCase() + answer.substring(1);
-            String spkey = spanswer.substring(0, 1).toUpperCase() + spanswer.substring(1);
-            if (pl.money >= pl.crystals.get(spkey)) {
-                pl.money -= pl.crystals.get(spkey);
+            if (pl.money >= pl.crystals.get(key)) {
+                pl.money -= pl.crystals.get(key);
                 if (pl.inventory.containsKey(key)){
                     pl.inventory.put(key, pl.inventory.get(key) + 1);
                 } else {

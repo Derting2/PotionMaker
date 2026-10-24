@@ -3,7 +3,7 @@ import java.util.*;
 public class Player {
     String clientmessage = "Ожидаем клиента...";
     Boolean beclient = false;
-    Integer money = 0;
+    Integer money = 1000;
     Random random = new Random();
     Integer newrecipecost = 100;
     double reputation = 3000;

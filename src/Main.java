@@ -10,18 +10,15 @@ volatile boolean clientServed = false;
 public static volatile boolean stopInputSignal = false;
 
 void main() {
-
-    System.out.println("");
-    System.out.println("");
-
+    System.out.println();
+    System.out.println();
     menu();
-
 }
 
 void menu(){
     ongamepage = false;
     while (true){
-        System.out.println("");
+        System.out.println();
         cons.ShowStartPage();
         System.out.print("Выберите действие: ");
         String answer = scan.next();
@@ -45,7 +42,7 @@ void menu(){
             default:
                 cons.showerror = true;
         }
-        if (getanswer == true) {
+        if (getanswer) {
             break;
         }
     }
@@ -125,7 +122,6 @@ void game() {
 
         if (!pl.beclient && !stopInputSignal && !oldThreadAlive) {
             stopInputSignal = false;
-
 
             clientTimerThread = new Thread(() -> TimerNewClient());
             clientTimerThread.start();

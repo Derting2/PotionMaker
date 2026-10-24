@@ -210,7 +210,7 @@ public class Console {
                 int index = j + (2 * i);
                 var keyList = new ArrayList<>(pl.crystals.keySet());
                 String key = keyList.get(index);
-                System.out.print(key + pl.crystals.get(key) + " Монет" + " ".repeat(5));
+                System.out.print(key + ": " + pl.crystals.get(key) + " Монет" + " ".repeat(5));
             }
             System.out.println("\n");
         }

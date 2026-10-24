@@ -23,7 +23,7 @@ void menu(){
         System.out.print("Выберите действие: ");
         String answer = scan.next();
         answer = answer.toLowerCase();
-        Boolean getanswer = false;
+        boolean getanswer = false;
         cons.showerror = false;
         switch (answer){
             case "и":
@@ -50,7 +50,7 @@ void menu(){
 
 void tutorial(){
     while (true){
-        System.out.println("");
+        System.out.println();
         cons.ShowTutorialPage();
         System.out.print("Выберите действие: ");
         String answer = scan.next().toLowerCase();
@@ -69,7 +69,7 @@ void tutorial(){
 void inventory(){
     ongamepage = false;
     while (true){
-        System.out.println("");
+        System.out.println();
         cons.ShowInventory();
         System.out.print("Выберите действие: ");
         String answer = scan.next().toLowerCase();
@@ -84,7 +84,7 @@ void inventory(){
 void recipes(){
     ongamepage = false;
     while (true){
-        System.out.println("");
+        System.out.println();
         cons.ShowRecipes();
         System.out.print("Выберите действие: ");
         String answer = scan.next().toLowerCase();
@@ -195,12 +195,12 @@ void makepotions(){
 
     while (true){
 
-        System.out.println("");
+        System.out.println();
         cons.ShowMakerPotion(stage);
 
         if (stage >= 2){
             System.out.print("Выберите действие: ");
-        } else if (stage <= 1){
+        } else {
             System.out.print("Напишите название кристалла, который хотите добавить: ");
         }
 
@@ -345,7 +345,7 @@ void shopmenu(){
 void showcrystalshop(){
     ongamepage = false;
     while (true){
-        System.out.println("");
+        System.out.println();
         cons.ShowShopCrystal();
         System.out.print("Какой кристалл вы хотите купить?: ");
         String answer = scan.next().toLowerCase();
